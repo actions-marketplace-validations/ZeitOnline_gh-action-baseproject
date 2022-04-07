@@ -29,7 +29,7 @@ inputs:
   vault_get_secrets:
     description: 'Vault secrets to get (see: https://github.com/hashicorp/vault-action#key-syntax)'
     required: false
-    default: 'false'
+    default: ''
   vault_export_token:
     description: 'Get a Vault Token and export it as VAULT_TOKEN'
     required: false
