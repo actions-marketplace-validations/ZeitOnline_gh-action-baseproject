@@ -39,7 +39,7 @@ Here are all the inputs available through `with`:
 | `project_name`       | The Name (`project_name`) of the ZON baseproject                                  |         | ✔        |
 | `environment`        | The Environment in which the workflow runs                                        |         | ✔        |
 | `google_auth`        | Authenticate to Google Cloud                                                      | `false` |          |
-| `ghe_auth`           | Authenticate to GKE (Google Kubernetes Engine)                                    | `false` |          |
-| `gcr_auth`           | Authenticate to GCR (Googke Container Registry)                                   | `false` |          |
+| `gke_auth`           | Authenticate to GKE (Google Kubernetes Engine)                                    | `false` |          |
+| `gcr_auth`           | Authenticate to GCR (Google Container Registry)                                   | `false` |          |
 | `vault_get_secrets`  | Vault secrets to get (see: https://github.com/hashicorp/vault-action#key-syntax)  |         |          |
 | `vault_export_token` | Get a Vault Token and export it as VAULT_TOKEN                                    | `false` |          |
