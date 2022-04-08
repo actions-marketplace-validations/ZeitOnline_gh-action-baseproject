@@ -1,0 +1,38 @@
+on:
+  push:
+    # Sequence of patterns matched against refs/tags
+    tags:
+      - 'v*'
+
+name: Create Release
+
+jobs:
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest # run on hosted runner, because it's a public repo
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Retrieve annotated tags
+        run: |
+          git fetch --tags --force
+
+      - name: Get tag annotation
+        uses: ericcornelissen/git-tag-annotation-action@v2
+        id: tag-data
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            ${{ steps.tag-data.outputs.git-tag-annotation }}
+          draft: false
+          prerelease: false
