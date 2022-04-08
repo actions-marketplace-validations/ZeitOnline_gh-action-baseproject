@@ -36,6 +36,10 @@ inputs:
     default: 'false'
 
 outputs:
+  project_name:
+    value: ${{ steps.baseproject-config.outputs.project_name }}
+  environment:
+    value: ${{ steps.baseproject-config.outputs.environment }}
   namespace:
     value: ${{ steps.baseproject-config.outputs.namespace }}
   ci_sa_name:
@@ -76,6 +80,8 @@ runs:
       # detection mambo-jambo kicks in and converts the JSON to an internal map-like data
       # structure from which it's impossible (or at least unclear) how to get individual fields).
       run: |
+        echo "::set-output name=project_name::"${{ inputs.project_name }}
+        echo "::set-output name=environment::"${{ inputs.environment }}
         echo "::set-output name=namespace::"${{ fromJSON(steps.raw-config.outputs.raw).namespace }}
         echo "::set-output name=ci_sa_name::"${{ fromJSON(steps.raw-config.outputs.raw).ci-sa-name }}
         echo "::set-output name=wi_sa_name::"${{ fromJSON(steps.raw-config.outputs.raw).wi-sa-name }}
