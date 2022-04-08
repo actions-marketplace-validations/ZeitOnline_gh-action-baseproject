@@ -43,19 +43,19 @@ outputs:
   namespace:
     value: ${{ steps.baseproject-config.outputs.namespace }}
   ci_sa_name:
-    value: ${{ steps.baseproject-config.outputs.ci-sa-name }}
+    value: ${{ steps.baseproject-config.outputs.ci_sa_name }}
   wi_sa_name:
-    value: ${{ steps.baseproject-config.outputs.wi-sa-name }}
+    value: ${{ steps.baseproject-config.outputs.wi_sa_name }}
   cluster_name:
-    value: ${{ steps.baseproject-config.outputs.cluster-name }}
+    value: ${{ steps.baseproject-config.outputs.cluster_name }}
   cluster_project:
-    value: ${{ steps.baseproject-config.outputs.cluster-project }}
+    value: ${{ steps.baseproject-config.outputs.cluster_project }}
   cluster_location:
-    value: ${{ steps.baseproject-config.outputs.cluster-location }}
+    value: ${{ steps.baseproject-config.outputs.cluster_location }}
   vault_role:
-    value: ${{ steps.baseproject-config.outputs.vault-role }}
+    value: ${{ steps.baseproject-config.outputs.vault_role }}
   gha_vault_role:
-    value: ${{ steps.baseproject-config.outputs.gha-vault-role }}
+    value: ${{ steps.baseproject-config.outputs.gha_vault_role }}
 
 runs:
 
