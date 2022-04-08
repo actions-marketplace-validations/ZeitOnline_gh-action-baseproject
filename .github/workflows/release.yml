@@ -1,8 +1,8 @@
 on:
   push:
-    # Sequence of patterns matched against refs/tags
     tags:
       - 'v*'
+      - '!v0'
 
 name: Create Release
 
@@ -10,6 +10,12 @@ jobs:
   build:
     name: Create Release
     runs-on: ubuntu-latest # run on hosted runner, because it's a public repo
+    permissions:
+      contents: write
+
+    env:
+      rolling_tag: v0
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -36,3 +42,8 @@ jobs:
             ${{ steps.tag-data.outputs.git-tag-annotation }}
           draft: false
           prerelease: false
+
+      - name: Move rolling tag
+        run: |
+          git tag -d ${{ env.rolling_tag }} && git push --delete origin ${{ env.rolling_tag }}
+          git tag ${{ env.rolling_tag }} && git push origin ${{ env.rolling_tag }}
