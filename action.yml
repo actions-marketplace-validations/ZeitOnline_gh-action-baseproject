@@ -57,6 +57,11 @@ outputs:
   gha_vault_role:
     value: ${{ steps.baseproject-config.outputs.gha_vault_role }}
 
+  # Static outputs
+  gcr_image_registry:
+    value: eu.gcr.io/zeitonline-210413
+
+
 runs:
 
   using: "composite"
