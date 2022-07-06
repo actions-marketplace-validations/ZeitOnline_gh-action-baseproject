@@ -102,7 +102,7 @@ runs:
       uses: google-github-actions/auth@v0
       with:
         token_format: 'access_token'
-        workload_identity_provider: projects/454945930056/locations/global/workloadIdentityPools/github-pool/providers/github-provider
+        workload_identity_provider: projects/161854031382/locations/global/workloadIdentityPools/github-pool/providers/github-actions-provider
         service_account: ${{ steps.baseproject-config.outputs.ci_sa_name }}
 
     - name: Write GKE Credentials to kubeconfig
