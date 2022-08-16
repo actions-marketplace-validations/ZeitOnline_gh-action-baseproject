@@ -56,6 +56,8 @@ outputs:
     value: github-actions
   gha_vault_role:
     value: ${{ steps.baseproject-config.outputs.gha_vault_role }}
+  gcloud_access_token:
+    value: ${{ steps.output_gcloud_token.outputs.gcloud_access_token }}
 
   # Static outputs
   gcr_image_registry:
@@ -104,6 +106,12 @@ runs:
         token_format: 'access_token'
         workload_identity_provider: projects/161854031382/locations/global/workloadIdentityPools/github-pool/providers/github-actions-provider
         service_account: ${{ steps.baseproject-config.outputs.ci_sa_name }}
+
+    - name: Set GCloud Access Token as output
+      id: output_gcloud_token
+      if: steps.auth.outputs.access_token != ''
+      shell: bash
+      run: echo "::set-output name=gcloud_access_token::"${{ steps.auth.outputs.access_token }}
 
     - name: Write GKE Credentials to kubeconfig
       if: inputs.gke_auth == 'true'
