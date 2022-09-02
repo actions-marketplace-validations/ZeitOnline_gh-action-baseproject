@@ -76,4 +76,5 @@ Here are all the inputs available through `with`:
 | `google_auth`        | Authenticate to Google Cloud                                                      | `false` |          |
 | `gke_auth`           | Authenticate to GKE (Google Kubernetes Engine)                                    | `false` |          |
 | `gcr_auth`           | Authenticate to GCR (Google Container Registry)                                   | `false` |          |
+| `python_registry`    | Setup dependencies for Python Registry (Google Artifact Registry)                 | `false` |          |
 | `vault_export_token` | Get a Vault Token and export it as VAULT_TOKEN                                    | `false` |          |
