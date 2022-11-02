@@ -93,16 +93,16 @@ runs:
       # detection mambo-jambo kicks in and converts the JSON to an internal map-like data
       # structure from which it's impossible (or at least unclear) how to get individual fields).
       run: |
-        echo "::set-output name=project_name::"${{ inputs.project_name }}
-        echo "::set-output name=environment::"${{ inputs.environment }}
-        echo "::set-output name=namespace::"${{ fromJSON(steps.raw-config.outputs.raw).namespace }}
-        echo "::set-output name=ci_sa_name::"${{ fromJSON(steps.raw-config.outputs.raw).ci-sa-name }}
-        echo "::set-output name=wi_sa_name::"${{ fromJSON(steps.raw-config.outputs.raw).wi-sa-name }}
-        echo "::set-output name=cluster_name::"${{ fromJSON(steps.raw-config.outputs.raw).cluster-name }}
-        echo "::set-output name=cluster_project::"${{ fromJSON(steps.raw-config.outputs.raw).cluster-project }}
-        echo "::set-output name=cluster_location::"${{ fromJSON(steps.raw-config.outputs.raw).cluster-location }}
-        echo "::set-output name=vault_role::"${{ fromJSON(steps.raw-config.outputs.raw).vault-role }}
-        echo "::set-output name=gha_vault_role::"${{ fromJSON(steps.raw-config.outputs.raw).gha-vault-role }}
+        echo "project_name=${{ inputs.project_name }}" >> $GITHUB_OUTPUT
+        echo "environment=${{ inputs.environment }}" >> $GITHUB_OUTPUT
+        echo "namespace=${{ fromJSON(steps.raw-config.outputs.raw).namespace }}" >> $GITHUB_OUTPUT
+        echo "ci_sa_name=${{ fromJSON(steps.raw-config.outputs.raw).ci-sa-name }}" >> $GITHUB_OUTPUT
+        echo "wi_sa_name=${{ fromJSON(steps.raw-config.outputs.raw).wi-sa-name }}" >> $GITHUB_OUTPUT
+        echo "cluster_name=${{ fromJSON(steps.raw-config.outputs.raw).cluster-name }}" >> $GITHUB_OUTPUT
+        echo "cluster_project=${{ fromJSON(steps.raw-config.outputs.raw).cluster-project }}" >> $GITHUB_OUTPUT
+        echo "cluster_location=${{ fromJSON(steps.raw-config.outputs.raw).cluster-location }}" >> $GITHUB_OUTPUT
+        echo "vault_role=${{ fromJSON(steps.raw-config.outputs.raw).vault-role }}" >> $GITHUB_OUTPUT
+        echo "gha_vault_role=${{ fromJSON(steps.raw-config.outputs.raw).gha-vault-role }}" >> $GITHUB_OUTPUT
 
     - name: GCloud OIDC Auth
       id: auth
@@ -117,7 +117,7 @@ runs:
       id: output_gcloud_token
       if: steps.auth.outputs.access_token != ''
       shell: bash
-      run: echo "::set-output name=gcloud_access_token::"${{ steps.auth.outputs.access_token }}
+      run: echo "gcloud_access_token=${{ steps.auth.outputs.access_token }}" >> $GITHUB_OUTPUT
 
     - name: Write GKE Credentials to kubeconfig
       if: inputs.gke_auth == 'true'
