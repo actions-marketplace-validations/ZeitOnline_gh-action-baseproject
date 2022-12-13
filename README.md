@@ -12,10 +12,10 @@ This composite action fetches environment-specific infrastructure infos from a T
 ## Example Usage
 
 
-### Authenticate against GKE and GCR
+### Authenticate against GKE and GAR
 
 Set up authentication against the Cluster that is configured for the project-environment.
-Also authenticate against GCR. All following steps will be fully authenticated to K8s/GCR.
+Also authenticate against GAR. All following steps will be fully authenticated to K8s/GAR.
 
 ```yaml
 jobs:
@@ -29,7 +29,7 @@ jobs:
                 project_name: ${{ env.PROJECT }}
                 environment: ${{ env.ENVIRONMENT }}
                 gke_auth: true
-                gcr_auth: true
+                gar_docker_auth: true
             # ...
 ```
 
@@ -76,5 +76,6 @@ Here are all the inputs available through `with`:
 | `google_auth`        | Authenticate to Google Cloud                                                      | `false` |          |
 | `gke_auth`           | Authenticate to GKE (Google Kubernetes Engine)                                    | `false` |          |
 | `gcr_auth`           | Authenticate to GCR (Google Container Registry)                                   | `false` |          |
+| `gar_docker_auth`    | Authenticate to GAR (Google Artifact Registry) for Docker                         | `false` |          |
 | `python_registry`    | Setup dependencies for Python Registry (Google Artifact Registry)                 | `false` |          |
 | `vault_export_token` | Get a Vault Token and export it as VAULT_TOKEN                                    | `false` |          |

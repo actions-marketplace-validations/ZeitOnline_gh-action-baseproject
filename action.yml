@@ -26,6 +26,10 @@ inputs:
     description: 'Authenticate to GCR (Googke Container Registry)'
     required: false
     default: 'false'
+  gar_docker_auth:
+    description: 'Authenticate to Google Artifact Registry for Docker'
+    required: false
+    default: 'false'
   vault_export_token:
     description: 'Get a Vault Token and export it as VAULT_TOKEN'
     required: false
@@ -142,6 +146,14 @@ runs:
       uses: docker/login-action@v2
       with:
         registry: eu.gcr.io
+        username: oauth2accesstoken
+        password: ${{ steps.auth.outputs.access_token }}
+
+    - name: Login to Docker GAR
+      if: inputs.gar_docker_auth == 'true'
+      uses: docker/login-action@v2
+      with:
+        registry: europe-west3-docker.pkg.dev
         username: oauth2accesstoken
         password: ${{ steps.auth.outputs.access_token }}
 
