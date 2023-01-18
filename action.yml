@@ -110,7 +110,7 @@ runs:
 
     - name: GCloud OIDC Auth
       id: auth
-      if: inputs.google_auth == 'true' || inputs.gke_auth == 'true' || inputs.gcr_auth == 'true'
+      if: inputs.google_auth == 'true' || inputs.gke_auth == 'true' || inputs.gcr_auth == 'true' || inputs.gar_docker_auth == 'true'
       uses: google-github-actions/auth@v1
       with:
         token_format: 'access_token'
