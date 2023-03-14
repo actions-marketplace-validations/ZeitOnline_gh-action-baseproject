@@ -135,7 +135,7 @@ runs:
 
     - name: Install kubectl
       if: inputs.gke_auth == 'true'
-      uses: azure/setup-kubectl@v3.1
+      uses: azure/setup-kubectl@v3.2
       with:
         version: v1.21.0
 
