@@ -12,6 +12,10 @@ inputs:
     description: 'The Environment in which the workflow runs'
     required: true
     default: 'production'
+  unique_id:
+    description: 'The unique TF baseproject identifier'
+    required: false
+    default: ''
 
   # Authentication-related features to be used in the parent workflow
   google_auth:
@@ -44,6 +48,8 @@ outputs:
     value: ${{ steps.baseproject-config.outputs.project_name }}
   environment:
     value: ${{ steps.baseproject-config.outputs.environment }}
+  unique_id:
+    value: ${{ steps.baseproject-config.outputs.unique_id }}
   namespace:
     value: ${{ steps.baseproject-config.outputs.namespace }}
   ci_sa_name:
@@ -81,6 +87,10 @@ runs:
   using: "composite"
 
   steps:
+    - id: vault_path
+      shell: bash
+      run: echo "result=zon-v2/data/baseproject/${{ inputs.project_name }}/${{ inputs.environment }}/${{ inputs.unique_id }}/infos" | tr -s / >> $GITHUB_OUTPUT
+
     - name: Retrieve Baseproject Environment Config from Vault
       id: raw-config
       uses: hashicorp/vault-action@v2.5.0
@@ -90,7 +100,7 @@ runs:
         path: github-actions
         role: gha-baseproject
         secrets: |
-          zon-v2/data/baseproject/${{ inputs.project_name }}/${{ inputs.environment }}/infos raw;
+          ${{ steps.vault_path.outputs.result }} raw;
 
     - id: baseproject-config
       shell: bash
@@ -112,7 +122,7 @@ runs:
 
     - name: GCloud OIDC Auth
       id: auth
-      if: inputs.google_auth == 'true' || inputs.gke_auth == 'true' || inputs.gcr_auth == 'true' || inputs.gar_docker_auth == 'true'
+      if: inputs.google_auth == 'true' || inputs.gke_auth == 'true' || inputs.gcr_auth == 'true' || inputs.gar_docker_auth == 'true'
       uses: google-github-actions/auth@v1
       with:
         token_format: 'access_token'
