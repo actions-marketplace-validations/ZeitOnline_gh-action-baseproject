@@ -73,6 +73,7 @@ Here are all the inputs available through `with`:
 | -------------------- | --------------------------------------------------------------------------------- | ------- | -------- |
 | `project_name`       | The Name (`project_name`) of the ZON baseproject                                  |         | ✔        |
 | `environment`        | The Environment in which the workflow runs                                        |         | ✔        |
+| `unique_id`          | The unique TF baseproject identifier                                              |         |          |
 | `google_auth`        | Authenticate to Google Cloud                                                      | `false` |          |
 | `gke_auth`           | Authenticate to GKE (Google Kubernetes Engine)                                    | `false` |          |
 | `gcr_auth`           | Authenticate to GCR (Google Container Registry)                                   | `false` |          |
