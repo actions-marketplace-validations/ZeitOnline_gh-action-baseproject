@@ -132,6 +132,7 @@ runs:
 
     - name: Import GPG key for zon-ops user
       uses: crazy-max/ghaction-import-gpg@v5
+      continue-on-error: true
       with:
         gpg_private_key: ${{ steps.zon-ops-gpg.outputs.gpg_key_private }}
         git_user_signingkey: true
