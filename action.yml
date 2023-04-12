@@ -135,6 +135,7 @@ runs:
         gpg_private_key: ${{ steps.zon-ops-gpg.outputs.gpg_key_private }}
         git_user_signingkey: true
         git_commit_gpgsign: true
+        git_tag_gpgsign: true
 
     - name: GCloud OIDC Auth
       id: auth
