@@ -118,6 +118,7 @@ runs:
         echo "cluster_project=${{ fromJSON(steps.raw-config.outputs.raw).cluster-project }}" >> $GITHUB_OUTPUT
         echo "cluster_location=${{ fromJSON(steps.raw-config.outputs.raw).cluster-location }}" >> $GITHUB_OUTPUT
         echo "vault_role=${{ fromJSON(steps.raw-config.outputs.raw).vault-role }}" >> $GITHUB_OUTPUT
+        echo "gha_vault_role=${{ fromJSON(steps.raw-config.outputs.raw).gha-vault-role }}" >> $GITHUB_OUTPUT
 
     - name: Retrieve zon-ops GitHub user GPG key
       id: zon-ops-gpg
