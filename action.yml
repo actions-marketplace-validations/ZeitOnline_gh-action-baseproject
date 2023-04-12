@@ -118,7 +118,23 @@ runs:
         echo "cluster_project=${{ fromJSON(steps.raw-config.outputs.raw).cluster-project }}" >> $GITHUB_OUTPUT
         echo "cluster_location=${{ fromJSON(steps.raw-config.outputs.raw).cluster-location }}" >> $GITHUB_OUTPUT
         echo "vault_role=${{ fromJSON(steps.raw-config.outputs.raw).vault-role }}" >> $GITHUB_OUTPUT
-        echo "gha_vault_role=${{ fromJSON(steps.raw-config.outputs.raw).gha-vault-role }}" >> $GITHUB_OUTPUT
+
+    - name: Retrieve zon-ops GitHub user GPG key
+      id: zon-ops-gpg
+      uses: hashicorp/vault-action@v2.5.0
+      with:
+        url: https://vault.ops.zeit.de
+        method: jwt
+        path: github-actions
+        role: gha-baseproject
+        secrets: zon/v1/github/zon-ops gpg_key_private
+
+    - name: Import GPG key for zon-ops user
+      uses: crazy-max/ghaction-import-gpg@v5
+      with:
+        gpg_private_key: ${{ steps.zon-ops-gpg.outputs.gpg_key_private }}
+        git_user_signingkey: true
+        git_commit_gpgsign: true
 
     - name: GCloud OIDC Auth
       id: auth
