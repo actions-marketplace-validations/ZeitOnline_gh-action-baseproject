@@ -17,4 +17,4 @@ jobs:
 
     - name: Run Tests
       id: run
-      uses: ../../
+      uses: ../../.
