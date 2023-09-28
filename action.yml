@@ -188,6 +188,11 @@ runs:
         username: oauth2accesstoken
         password: ${{ steps.auth.outputs.access_token }}
 
+    - id: repo_without_slash
+      if: inputs.vault_export_token == 'true'
+      shell: bash
+      run: echo "result=${{ github.repository }}" | tr -s / - >> $GITHUB_OUTPUT
+
     - name: Export a Vault token
       id: vault-export-token
       if: inputs.vault_export_token == 'true'
@@ -196,7 +201,7 @@ runs:
         url: https://vault.ops.zeit.de
         method: jwt
         path: github-actions
-        role: ${{ steps.baseproject-config.outputs.gha_vault_role }}
+        role: ${{ steps.baseproject-config.outputs.gha_vault_role }}-${{ steps.repo_without_slash.outputs.result }}
         exportToken: true
         secrets: sys/auth "token/" # Because the action needs to read something and Token auth is always there
 
