@@ -93,7 +93,7 @@ runs:
 
     - name: Retrieve Baseproject Environment Config from Vault
       id: raw-config
-      uses: hashicorp/vault-action@v2.7.0
+      uses: hashicorp/vault-action@v2.7.3
       with:
         url: https://vault.ops.zeit.de
         method: jwt
