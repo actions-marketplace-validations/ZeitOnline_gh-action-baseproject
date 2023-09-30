@@ -19,3 +19,13 @@ jobs:
       uses: ./
       with:
         project_name: github-actions-baseproject-tests
+  
+  release:
+    name: Release
+    needs: test
+    runs-on: [self-hosted,linux]
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: simple
+          package-name: gh-action-baseproject
