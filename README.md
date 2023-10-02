@@ -6,6 +6,8 @@
 
 ---
 
+## Summary
+
 This composite action fetches environment-specific infrastructure infos from a [Terraform baseproject](https://github.com/ZeitOnline/terraform-modules-baseproject) instance. Its main purpose is to facilitate standardized, secure (i.e. keyless) Authentication against ZON Cloud infrastructure, such as GCE, GKE, GCR and Vault.
 
 
