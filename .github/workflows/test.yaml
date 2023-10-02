@@ -1,10 +1,10 @@
-name: Test
+name: Tests
 
-on: workflow_dispatch
+on: pull_request
 
 jobs:
   test:
-    name: Test
+    name: Run Tests
     runs-on: [self-hosted,linux]
     permissions:
       id-token: write
@@ -19,13 +19,4 @@ jobs:
       uses: ./
       with:
         project_name: github-actions-baseproject-tests
-  
-  release:
-    name: Release
-    needs: test
-    runs-on: [self-hosted,linux]
-    steps:
-      - uses: google-github-actions/release-please-action@v3
-        with:
-          release-type: simple
-          package-name: gh-action-baseproject
+
