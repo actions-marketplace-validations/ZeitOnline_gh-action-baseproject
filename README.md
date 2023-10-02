@@ -2,11 +2,11 @@
 
 ---
 
-ℹ️ This Action is used internally by the ZEIT ONLINE organization and probably not useful outside of this specific context.
+**_NOTE:_** This Action is used internally by the ZEIT ONLINE organization and is probably not useful outside of this specific context.
 
 ---
 
-This composite action fetches environment-specific infrastructure infos from a Terraform ``baseproject`` instance. It (optionally) also handles Authentication against Cloud infrastructure, such as GCE, GKE, GCR and Vault.
+This composite action fetches environment-specific infrastructure infos from a [Terraform baseproject](https://github.com/ZeitOnline/terraform-modules-baseproject) instance. Its main purpose is to facilitate standardized, secure (i.e. keyless) Authentication against ZON Cloud infrastructure, such as GCE, GKE, GCR and Vault.
 
 
 ## Example Usage
