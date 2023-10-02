@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.4.0...v0.5.0) (2023-10-02)
+
+
+### Features
+
+* add test step ([837d427](https://github.com/ZeitOnline/gh-action-baseproject/commit/837d427a6ff825b60aa10c0b96a59c910b9b5437))
+
 ## [0.4.0](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.3.3...v0.4.0) (2023-10-02)
 
 
