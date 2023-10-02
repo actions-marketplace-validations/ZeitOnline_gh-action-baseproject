@@ -71,7 +71,7 @@ outputs:
   gha_vault_path:
     value: github-actions
   gha_vault_role:
-    value: ${{ steps.baseproject-config.outputs.gha_vault_role }}
+    value: ${{ steps.baseproject-config.outputs.gha_vault_role }}-${{ steps.repo_without_slash.outputs.result }}
   gcloud_access_token:
     value: ${{ steps.output_gcloud_token.outputs.gcloud_access_token }}
 

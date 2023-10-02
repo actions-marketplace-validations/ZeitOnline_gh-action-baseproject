@@ -18,7 +18,3 @@ jobs:
         with:
           release-type: simple
           package-name: gh-action-baseproject
-
-      - name: Retrieve annotated tags
-        run: |
-          git fetch --tags --force
