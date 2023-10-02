@@ -1,0 +1,21 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  
+    "dependencyDashboard": true,
+  
+    "schedule": ["every weekend"],
+  
+    "draftPR": true,
+  
+    "enabledManagers": [
+      "github-actions"
+      ],
+  
+      "packageRules": [
+        {
+          "matchUpdateTypes": ["minor", "patch"],
+          "matchManagers": ["github-actions"],
+          "automerge": true
+        }
+      ]
+  }
