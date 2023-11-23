@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.6.0...v0.6.1) (2023-11-23)
+
+
+### Bug Fixes
+
+* **baseproject:** remove superfluous conditional ([#39](https://github.com/ZeitOnline/gh-action-baseproject/issues/39)) ([8eeb160](https://github.com/ZeitOnline/gh-action-baseproject/commit/8eeb16075c7a541e8cbf3077761b9b0fa6a282d8))
+
 ## [0.6.0](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.5.1...v0.6.0) (2023-10-05)
 
 
