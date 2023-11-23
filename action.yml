@@ -190,7 +190,6 @@ runs:
         password: ${{ steps.auth.outputs.access_token }}
 
     - id: repo_without_slash
-      if: inputs.vault_export_token == 'true'
       shell: bash
       run: echo "result=${{ github.repository }}" | tr -s / - >> $GITHUB_OUTPUT
 
