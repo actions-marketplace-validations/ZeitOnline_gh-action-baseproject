@@ -4,7 +4,7 @@ on: [pull_request]
 # TODO: we clould run other checks as well (e.g. tf linting, docs creation etc.), maybe even via pre-commit
 jobs:
   commitlint:
-    runs-on: [self-hosted, x64, linux, ephemeral, zon-image-latest]
+    runs-on: zon-ubuntu-general-dind
     steps:
       - uses: actions/checkout@v3
       - uses: wagoid/commitlint-github-action@v5
