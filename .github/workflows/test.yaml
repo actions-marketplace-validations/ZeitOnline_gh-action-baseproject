@@ -6,7 +6,7 @@ on:
 jobs:
   test:
     name: Run Tests
-    runs-on: [self-hosted,linux]
+    runs-on: zon-ubuntu-general-dind
     permissions:
       id-token: write
       contents: write
