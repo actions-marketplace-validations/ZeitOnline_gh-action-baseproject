@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.7.0](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.6.1...v0.7.0) (2023-12-22)
+
+
+### Features
+
+* **release:** set rolling major/minor tags ([#43](https://github.com/ZeitOnline/gh-action-baseproject/issues/43)) ([fba94a9](https://github.com/ZeitOnline/gh-action-baseproject/commit/fba94a9cefc917be20332fbb09b318ad80bf54c8))
+
+
+### Bug Fixes
+
+* **test:** just testing the updated release workflow ([#44](https://github.com/ZeitOnline/gh-action-baseproject/issues/44)) ([df2d77e](https://github.com/ZeitOnline/gh-action-baseproject/commit/df2d77ecd2530efc7ad3973d49f7afb4115a120e))
+* **test:** test release ([#47](https://github.com/ZeitOnline/gh-action-baseproject/issues/47)) ([287321d](https://github.com/ZeitOnline/gh-action-baseproject/commit/287321de220f02b991ef990bb15729a4d668d061))
+
 ## [0.6.1](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.6.0...v0.6.1) (2023-11-23)
 
 
