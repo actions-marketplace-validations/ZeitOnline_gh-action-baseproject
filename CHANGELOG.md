@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.6](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.7.5...v0.7.6) (2023-12-22)
+
+
+### Bug Fixes
+
+* **release:** don't tag v0 explicitly ([#59](https://github.com/ZeitOnline/gh-action-baseproject/issues/59)) ([ac3acb7](https://github.com/ZeitOnline/gh-action-baseproject/commit/ac3acb7db7bc0e70df163fe7a43d60f046546ec7))
+
 ## [0.7.5](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.7.4...v0.7.5) (2023-12-22)
 
 
