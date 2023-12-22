@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.7](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.7.6...v0.7.7) (2023-12-22)
+
+
+### Bug Fixes
+
+* **release:** combine lint and check jobs ([#61](https://github.com/ZeitOnline/gh-action-baseproject/issues/61)) ([20fdbee](https://github.com/ZeitOnline/gh-action-baseproject/commit/20fdbeebd826622cea71b1f725c8b8e24a54c2fa))
+
 ## [0.7.6](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.7.5...v0.7.6) (2023-12-22)
 
 
