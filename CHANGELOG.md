@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.4](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.7.3...v0.7.4) (2023-12-22)
+
+
+### Bug Fixes
+
+* **release:** perform a checkout before tag step ([#55](https://github.com/ZeitOnline/gh-action-baseproject/issues/55)) ([ecdcd8d](https://github.com/ZeitOnline/gh-action-baseproject/commit/ecdcd8d15777e7eec5218e3899504075c6733ed8))
+
 ## [0.7.3](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.7.2...v0.7.3) (2023-12-22)
 
 
