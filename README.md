@@ -82,3 +82,9 @@ Here are all the inputs available through `with`:
 | `gar_docker_auth`    | Authenticate to GAR (Google Artifact Registry) for Docker                         | `false` |          |
 | `python_registry`    | Setup dependencies for Python Registry (Google Artifact Registry)                 | `false` |          |
 | `vault_export_token` | Get a Vault Token and export it as VAULT_TOKEN                                    | `false` |          |
+
+
+## Releases
+
+This action uses [Release Please](https://github.com/google-github-actions/release-please-action). To create a new release, create a PR and use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) as described [here](https://docs.zeit.de/ops/terraform-infra/terraform/repos.html#modulversionierung).
+
