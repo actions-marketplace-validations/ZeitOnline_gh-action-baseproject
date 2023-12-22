@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.3](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.7.2...v0.7.3) (2023-12-22)
+
+
+### Bug Fixes
+
+* **release:** use id attribute ([#53](https://github.com/ZeitOnline/gh-action-baseproject/issues/53)) ([7a4230c](https://github.com/ZeitOnline/gh-action-baseproject/commit/7a4230cb8bac27368dd950c61a89343fdd03be5c))
+
 ## [0.7.2](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.7.1...v0.7.2) (2023-12-22)
 
 
