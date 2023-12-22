@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.8.0...v0.8.1) (2023-12-22)
+
+
+### Bug Fixes
+
+* **release:** test release ([d876383](https://github.com/ZeitOnline/gh-action-baseproject/commit/d8763833630234842199703cfa539728593349af))
+
 ## [0.8.0](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.7.7...v0.8.0) (2023-12-22)
 
 
