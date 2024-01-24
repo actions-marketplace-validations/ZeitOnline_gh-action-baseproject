@@ -163,12 +163,6 @@ runs:
         project_id: ${{ steps.baseproject-config.outputs.cluster_project }}
         location: ${{ steps.baseproject-config.outputs.cluster_location }}
 
-    - name: Install kubectl
-      if: inputs.gke_auth == 'true'
-      uses: azure/setup-kubectl@v3.2
-      with:
-        version: v1.21.0
-
     - if: inputs.gke_auth == 'true'
       shell: bash
       run: kubectl config set-context --current --namespace=${{ steps.baseproject-config.outputs.namespace }}
