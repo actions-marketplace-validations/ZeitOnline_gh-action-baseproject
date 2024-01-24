@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.8.1...v0.9.0) (2024-01-24)
+
+
+### Features
+
+* **main:** No need (or rather, counterproductive) to install kubectl ourselves, it's already in our runner image ([5283422](https://github.com/ZeitOnline/gh-action-baseproject/commit/5283422b792bc482210973725d5798c50fd403cc))
+
 ## [0.8.1](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.8.0...v0.8.1) (2023-12-22)
 
 
