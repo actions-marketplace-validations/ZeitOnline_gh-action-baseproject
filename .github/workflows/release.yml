@@ -2,11 +2,14 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '.github/**'
+      - 'renovate.json'
 
 name: Create Release
 
 jobs:
-  build:
+  release:
     name: Create Release
     runs-on: ubuntu-latest # run on hosted runner, because it's a public repo
     permissions:
@@ -19,12 +22,19 @@ jobs:
         with:
           release-type: simple
 
-      - uses: actions/checkout@v4
+    outputs:
+      major: ${{ steps.release.outputs.major_version }}
+      minor: ${{ steps.release.outputs.minor_version }}
+      release_created: ${{ steps.release.outputs.release_created }}
 
-      - name: tag major and minor versions
-        uses: zeitonline/gh-action-workflows-ops/.github/workflows/tag-rolling-release.yaml@main
-        if: ${{ steps.release.outputs.release_created }}
-        with:
-          runs-on: zon-ubuntu-general-dind
-          major: ${{ steps.release.outputs.major }}
-          minor: ${{ steps.release.outputs.minor }}
+  tag:
+    name: Tag Major and Minor Versions
+    uses: zeitonline/gh-action-workflows-ops/.github/workflows/tag-rolling-release.yaml@main
+
+    needs: release
+    if: ${{ needs.release.outputs.release_created }}
+
+    with:
+      runs-on: ubuntu-latest # run on hosted runner, because it's a public repo
+      major: ${{ needs.release.outputs.major }}
+      minor: ${{ needs.release.outputs.minor }}
