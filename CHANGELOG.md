@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.0](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.9.0...v0.10.0) (2024-02-01)
+
+
+### Features
+
+* set up docker buildx builder ([d3e323d](https://github.com/ZeitOnline/gh-action-baseproject/commit/d3e323d54f13140e7c748bf8fb41fe236901be67))
+
 ## [0.9.0](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.8.1...v0.9.0) (2024-01-24)
 
 
