@@ -67,6 +67,17 @@ jobs:
 ```
 
 
+### Set up docker buildx
+
+For both convenience and consistency this action can also set up a `docker buildx` builder.
+
+This behaviour is controlled by the `setup_buildx` input, which defaults to "do nothing";
+set it to "true" to enable.
+Setting `gar_docker_auth` also enables this implicitly
+(with the assumption, if you want to push a docker image, you probably want to build one first),
+if this is not desired, set `setup_buildx` to "false" explicitly.
+
+
 ## Reference
 
 Here are all the inputs available through `with`:
@@ -82,6 +93,7 @@ Here are all the inputs available through `with`:
 | `gar_docker_auth`    | Authenticate to GAR (Google Artifact Registry) for Docker                         | `false` |          |
 | `python_registry`    | Setup dependencies for Python Registry (Google Artifact Registry)                 | `false` |          |
 | `vault_export_token` | Get a Vault Token and export it as VAULT_TOKEN                                    | `false` |          |
+| `setup_buildx`       | Set up docker buildx                                                              | `unset` |          |
 
 
 ## Releases

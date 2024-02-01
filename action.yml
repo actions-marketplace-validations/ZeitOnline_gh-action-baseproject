@@ -43,6 +43,12 @@ inputs:
     required: false
     default: 'false'
 
+  # docker setup, both for convenience and centralization
+  setup_buildx:
+    description: 'Setup docker buildx. Enabling gar_docker_auth implies this; set explicitly to "false" to disable'
+    required: false
+    default: 'unset'
+
 outputs:
   project_name:
     value: ${{ steps.baseproject-config.outputs.project_name }}
@@ -209,3 +215,20 @@ runs:
       shell: bash
       run: |
         python -m pip install --upgrade --upgrade-strategy eager setuptools twine keyrings.google-artifactregistry-auth
+
+    - name: Parse setup docker buildx input
+      shell: bash
+      run: |
+        setup_buildx="${{ inputs.setup_buildx }}"
+        if [[ "$setup_buildx" != "false" && "${{ inputs.gar_docker_auth }}" = "true" ]]; then
+            setup_build="true"
+        fi
+        echo "setup_buildx=$setup_buildx" >> $GITHUB_ENV
+    - name: Setup docker buildx container
+      if: env.setup_buildx == 'true'
+      uses: docker/setup-buildx-action@v3.0.0
+    # Support `docker buildx build --cache-[from}to] type=gha` directly,
+    # and not just via docker/build-push-action.
+    - name: Setup docker buildx environment
+      if: env.setup_buildx == 'true'
+      uses: crazy-max/ghaction-github-runtime@v3.0.0

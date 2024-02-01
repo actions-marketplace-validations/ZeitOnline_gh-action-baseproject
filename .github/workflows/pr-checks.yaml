@@ -43,4 +43,9 @@ jobs:
         role: ${{ steps.baseproject.outputs.gha_vault_role }}
         secrets: |
           zon/v1/github-actions-baseproject-tests/example foo | EXAMPLE_VAULT_VALUE ;
-    
+
+    - name: '[TEST] Run docker build'
+      run: |
+        docker buildx build --output type=docker \
+          --cache-from type=gha --cache-to type=gha,mode=max \
+          --tag test ./test
