@@ -221,7 +221,7 @@ runs:
       run: |
         setup_buildx="${{ inputs.setup_buildx }}"
         if [[ "$setup_buildx" != "false" && "${{ inputs.gar_docker_auth }}" = "true" ]]; then
-            setup_build="true"
+            setup_buildx="true"
         fi
         echo "setup_buildx=$setup_buildx" >> $GITHUB_ENV
     - name: Setup docker buildx container
