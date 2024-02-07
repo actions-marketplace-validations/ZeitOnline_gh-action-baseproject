@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.1](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.0...v0.10.1) (2024-02-07)
+
+
+### Bug Fixes
+
+* typo in d3e323d ([ef7344a](https://github.com/ZeitOnline/gh-action-baseproject/commit/ef7344a6ad092f0370e30ed65d8ab6c4533a01e1))
+
 ## [0.10.0](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.9.0...v0.10.0) (2024-02-01)
 
 
