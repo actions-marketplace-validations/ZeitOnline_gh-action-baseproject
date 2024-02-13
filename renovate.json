@@ -16,6 +16,7 @@
           "matchUpdateTypes": ["minor", "patch"],
           "matchManagers": ["github-actions"],
           "semanticCommitType": "fix",
+          "groupName": "github-actions",
           "automerge": true
         }
       ]
