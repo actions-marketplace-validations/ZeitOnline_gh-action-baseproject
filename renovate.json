@@ -18,6 +18,12 @@
           "semanticCommitType": "fix",
           "groupName": "github-actions",
           "automerge": true
+        },
+        {
+          "description": "Use fix prefix for action.yml updates, so release-please recognizes them as patch updates",
+          "matchFileNames": ["action.yml"],
+          "matchManagers": ["github-actions"],
+          "commitMessagePrefix": "fix"
         }
       ]
   }
