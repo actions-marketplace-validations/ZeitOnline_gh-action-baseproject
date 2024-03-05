@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.10.3](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.2...v0.10.3) (2024-03-05)
+
+
+### Bug Fixes
+
+* **deps:** update docker/setup-buildx-action action to v3.1.0 ([0ccdbd8](https://github.com/ZeitOnline/gh-action-baseproject/commit/0ccdbd8dd3edbf6e914016650cb4a21ec2d53fde))
+* use fix prefix for action.yml ([70e9f3d](https://github.com/ZeitOnline/gh-action-baseproject/commit/70e9f3d8599f5236e07e09987ff8f8dfd7ee4326))
+
 ## [0.10.2](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.1...v0.10.2) (2024-02-13)
 
 
