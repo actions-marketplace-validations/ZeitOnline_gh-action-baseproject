@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.4](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.3...v0.10.4) (2024-07-24)
+
+
+### Bug Fixes
+
+* use gcr mirror in docker buildx ([8b6d110](https://github.com/ZeitOnline/gh-action-baseproject/commit/8b6d110ccb00c94e1be54d2673fd4866c9539bbe))
+
 ## [0.10.3](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.2...v0.10.3) (2024-03-05)
 
 
