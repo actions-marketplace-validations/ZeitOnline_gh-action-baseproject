@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.5](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.4...v0.10.5) (2024-09-10)
+
+
+### Bug Fixes
+
+* update github-actions ([fdf9bc1](https://github.com/ZeitOnline/gh-action-baseproject/commit/fdf9bc1c328230f1b0d7208ca7c9908671829b8d))
+
 ## [0.10.4](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.3...v0.10.4) (2024-07-24)
 
 
