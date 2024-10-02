@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.6](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.5...v0.10.6) (2024-10-02)
+
+
+### Bug Fixes
+
+* rename buildkit argument ([b906f59](https://github.com/ZeitOnline/gh-action-baseproject/commit/b906f596b4d98bc155cbc699559bcadd557f5f6b))
+
 ## [0.10.5](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.4...v0.10.5) (2024-09-10)
 
 
