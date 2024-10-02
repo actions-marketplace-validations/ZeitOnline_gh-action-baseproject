@@ -229,7 +229,7 @@ runs:
       uses: docker/setup-buildx-action@988b5a0280414f521da01fcc63a27aeeb4b104db # v3.6.1
       with:
         buildkitd-flags: --debug
-        config-inline: |
+        buildkitd-config-inline: |
           debug = true
           [registry."docker.io"]
             mirrors = ["https://mirror.gcr.io"]
