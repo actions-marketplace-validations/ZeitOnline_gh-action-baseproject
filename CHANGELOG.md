@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.10.7](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.6...v0.10.7) (2024-10-15)
+
+
+### Bug Fixes
+
+* **deps:** update docker/setup-buildx-action action to v3.7.1 ([32ff132](https://github.com/ZeitOnline/gh-action-baseproject/commit/32ff1322a178e50f72329bd274cbda8730bb196f))
+* **deps:** update google-github-actions/auth digest to 8254fb7 ([da8e7ba](https://github.com/ZeitOnline/gh-action-baseproject/commit/da8e7bafb88b8ad881d85cc993479f1324d8a107))
+* don't set buildkit-flags ([914853f](https://github.com/ZeitOnline/gh-action-baseproject/commit/914853f7db79fe25a86aa18813d4264ebe2554c3))
+
 ## [0.10.6](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.5...v0.10.6) (2024-10-02)
 
 
