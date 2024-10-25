@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.10.8](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.7...v0.10.8) (2024-10-25)
+
+
+### Bug Fixes
+
+* **vault:** increase token TTL ([134f0a1](https://github.com/ZeitOnline/gh-action-baseproject/commit/134f0a157bf926d5cedef336e6dead046477710d))
+
 ## [0.10.7](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.6...v0.10.7) (2024-10-15)
 
 
