@@ -204,7 +204,6 @@ runs:
         role: ${{ steps.baseproject-config.outputs.gha_vault_role }}-${{ steps.repo_without_slash.outputs.result }}
         exportToken: true
         secrets: sys/auth "token/" # Because the action needs to read something and Token auth is always there
-        jwtTtl: 7200 # 2 hour, for extra long running workflows
 
     - id: vault_token
       run: echo "vault_token=$(echo $VAULT_TOKEN)" >> $GITHUB_OUTPUT
