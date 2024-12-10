@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.11.0](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.8...v0.11.0) (2024-12-10)
+
+
+### Features
+
+* expose python binary as input ([404fced](https://github.com/ZeitOnline/gh-action-baseproject/commit/404fced77ce51f36b24b07aa1f78896889d72a5b))
+
+
+### Bug Fixes
+
+* fix package name ([d77a39b](https://github.com/ZeitOnline/gh-action-baseproject/commit/d77a39be468dda223cb8586e3d4575e1ac203f1b))
+
 ## [0.10.8](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.7...v0.10.8) (2024-10-25)
 
 
