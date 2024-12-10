@@ -16,6 +16,10 @@ inputs:
     description: 'The unique TF baseproject identifier'
     required: false
     default: ''
+  python_binary:
+    description: 'Python binary to use'
+    required: false
+    default: 'python'
 
   # Authentication-related features to be used in the parent workflow
   google_auth:
@@ -214,8 +218,7 @@ runs:
       if: inputs.python_registry == 'true'
       shell: bash
       run: |
-        python -m pip install --upgrade --upgrade-strategy eager setuptools twine keyrings.google-artifactregistry-auth
-
+        ${{ inputs.python_binary }} -m pip install --upgrade --upgrade-strategy eager setuptools twine keyrings.google-artifactre
     - name: Parse setup docker buildx input
       shell: bash
       run: |
