@@ -218,7 +218,7 @@ runs:
       if: inputs.python_registry == 'true'
       shell: bash
       run: |
-        ${{ inputs.python_binary }} -m pip install --upgrade --upgrade-strategy eager setuptools twine keyrings.google-artifactre
+        ${{ inputs.python_binary }} -m pip install --upgrade --upgrade-strategy eager setuptools twine keyrings.google-artifactregistry-auth
     - name: Parse setup docker buildx input
       shell: bash
       run: |
