@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.11.1](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.11.0...v0.11.1) (2025-01-07)
+
+
+### Bug Fixes
+
+* **deps:** update crazy-max/ghaction-import-gpg digest to cb9bde2 ([fc6cb03](https://github.com/ZeitOnline/gh-action-baseproject/commit/fc6cb03ad00755c2ec9bcfdb77955132006fd8eb))
+* **deps:** update github-actions ([de5c82c](https://github.com/ZeitOnline/gh-action-baseproject/commit/de5c82c545f86f9296bdff01aefa8dc60902e134))
+* **deps:** update google-github-actions/auth digest to 6fc4af4 ([52bd99f](https://github.com/ZeitOnline/gh-action-baseproject/commit/52bd99f7513f1249fb4e065a4d51dcfdc7cd32c4))
+
 ## [0.11.0](https://github.com/ZeitOnline/gh-action-baseproject/compare/v0.10.8...v0.11.0) (2024-12-10)
 
 
